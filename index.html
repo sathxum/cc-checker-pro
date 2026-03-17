@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Checker Pro - Free Credit Card Checker and Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <span class="logo-text">CHKR.CC</span>
+            </div>
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#">FEATURES</a>
+                <a href="#">API</a>
+                <a href="#">SUPPORT</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <h1>Free Credit Card Checker and Validator</h1>
+            <p class="subtitle">Fast, secure, and accurate card validation</p>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <textarea 
+                    id="cardInput" 
+                    placeholder="4552250055368xx3|08|2026|113&#10;4242424242424242|12|2025|123&#10;Enter cards in format: number|mm|yyyy|cvv"
+                ></textarea>
+                
+                <div class="toolbar">
+                    <div class="left-buttons">
+                        <button id="checkBtn" class="btn-primary">
+                            <span class="play-icon">▶</span>
+                            <span>Start Check</span>
+                        </button>
+                        <button id="clearBtn" class="btn-icon" title="Clear">↻</button>
+                    </div>
+                    <button id="settingsBtn" class="btn-icon" title="Settings">⚙</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-box live">
+                    <span class="stat-label">Live</span>
+                    <span id="liveCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-box die">
+                    <span class="stat-label">Die</span>
+                    <span id="dieCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-box unknown">
+                    <span class="stat-label">Unknown</span>
+                    <span id="unknownCount" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="resultsSection" class="results-section hidden">
+                <div class="results-header">
+                    <span>Results</span>
+                    <span id="checkedCount">0 cards checked</span>
+                </div>
+                <div id="resultsList" class="results-list"></div>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <h2>How it Works?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Date Check</h3>
+                        <p>Compare the credit card expired date with today to see if the card is expired.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3>Number Check</h3>
+                        <p>A Luhn Algorithm checker tool will check your card number against the Luhn Algorithm.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>BIN/IIN Check</h3>
+                        <p>We will look up your card BIN in our database which contains more than 300,000 BIN records.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Security Check</h3>
+                        <p>Verify CVV and other security features to ensure the card meets standard requirements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Geographic Info</h3>
+                        <p>Provide detailed information about the card's issuing country, including currency and location.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏦</div>
+                        <h3>Bank Details</h3>
+                        <p>Retrieve comprehensive information about the issuing bank and card brand specifications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Section -->
+            <div class="api-section">
+                <h2>API Documentation</h2>
+                <p>Integrate our powerful BIN checking and card validation engine directly into your applications.</p>
+                <div class="code-block">
+                    <div class="code-header">POST https://api.chkr.cc/v1/check</div>
+                    <pre>{
+  "data": "4242424242424242|12|2025|123"
+}</pre>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 CC Checker Pro. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
